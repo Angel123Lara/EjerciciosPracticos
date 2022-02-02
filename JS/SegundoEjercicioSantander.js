@@ -7,24 +7,24 @@ function HTMLElements(str){
 
     var auxword = ''
     for (let i = 0 ; i<words.length ; i++){
-        console.log('-----')
-        console.log(words[i])
+        //console.log('-----')
+        //console.log(words[i])
         index = str.indexOf(words[i])
-        console.log(index)
+        //console.log(index)
         if (index != -1 ){
             auxStr = str.slice(index+3)
-            console.log(auxStr)
+            //console.log(auxStr)
             auxword = words[i]
-            console.log(auxword)
+            //console.log(auxword)
             auxword = auxword[0]+'/'+ auxword.slice(1)
-            console.log(auxword)
+            //console.log(auxword)
             auxindex = auxStr.indexOf(auxword)
-            console.log(auxindex)
+            //console.log(auxindex)
             if (auxindex!= -1){
                 continue
             }else{
-                console.log('----')
-                console.log(words[i])
+                //console.log('----')
+                //console.log(words[i])
                 return words[i]
             }
         }else 
@@ -41,5 +41,5 @@ function HTMLElements(str){
     return true
 }
 
-console.log(HTMLElements('<div><p>Hola!</div>'))
+console.log(HTMLElements('<div><p><i>Hola!</i></p></div>'))
 
